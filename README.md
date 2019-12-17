@@ -13,7 +13,7 @@
 **multi**
 
 省、市、区（县）的数据独立存放，通过 value 作为 key 进行关联。
-```javascript
+```json
 // province.json 省
 {
     "value": "110000",
