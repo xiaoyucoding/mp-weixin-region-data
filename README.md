@@ -8,7 +8,7 @@
 - 服务端数据字典与客户端一致
 
 ## 数据格式
-有两种模式
+有三种模式
 
 **multi**
 
@@ -97,4 +97,35 @@
         }]
     }]
 }
+```
+
+**SQL**
+
+```
+CREATE TABLE IF NOT EXISTS `region` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` int(11) NOT NULL DEFAULT '0',
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `code` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `code` (`code`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3371 ;
+```
+
+数据格式形如：
+```
++----+-----+--------------+--------+
+| id | pid | name         | code   |
++----+-----+--------------+--------+
+|  1 |   0 | 北京市       | 110000 |
+|  2 |   1 | 北京市       | 110100 |
+|  3 |   2 | 东城区       | 110101 |
+|  4 |   2 | 西城区       | 110102 |
+|  5 |   2 | 朝阳区       | 110105 |
+|  6 |   2 | 丰台区       | 110106 |
+|  7 |   2 | 石景山区     | 110107 |
+|  8 |   2 | 海淀区       | 110108 |
+|  9 |   2 | 门头沟区     | 110109 |
+| 10 |   2 | 房山区       | 110111 |
++----+-----+--------------+--------+
 ```
